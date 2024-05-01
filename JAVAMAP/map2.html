@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        
+    
+    </style>
+</head>
+<body>
+  <div class="heading">
+   <h1 class="text-center font-weight-bold"> EWU CSE FLOOR MAP </h1>
+  </div>
+  
+  <div id="popupContent">
+    <button id="closeButton">Close</button>
+    <iframe id="popupIframe" style="width:100%;height:85%;border:none;"></iframe>
+  </div>
+
+  <div class="map-container">
+    <img id="image" src="EwuFifthFloor.jpg" usemap="#image-map">
+    <map name="image-map">
+        <area target="" alt="" title="" coords="431,651,383,582" shape="rect" href="https://momento360.com/e/u/6ca1ea4c3fd04493af633bede07ddb7e?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true">
+    </map>
+  </div>
+
+  <script>
+    document.querySelector('area').addEventListener('click', function(event) {
+      event.preventDefault();
+      var link = this.getAttribute('href');
+      var popupContent = document.getElementById('popupContent');
+      var popupIframe = document.getElementById('popupIframe');
+      popupIframe.src = link;
+      popupContent.style.display = 'block';
+    });
+
+    document.getElementById('closeButton').addEventListener('click', function() {
+      var popupContent = document.getElementById('popupContent');
+      popupContent.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

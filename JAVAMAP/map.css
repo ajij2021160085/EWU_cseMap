@@ -1,0 +1,44 @@
+#image{
+border: 1px solid black;
+border-radius: 25px 50px 25px 50px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.map-container{
+  padding-top: 10px;
+}
+#popupContent iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+#popupContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+}
+
+
